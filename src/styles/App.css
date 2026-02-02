@@ -268,37 +268,43 @@ li::marker, .about-par b {
 .modal {
   position: fixed;
   width: 100%;
-  min-height: 100%;
   top: 0;
   left: 0px;
   display: flex;
   justify-content: center;
   z-index: 10000;
-  padding: 15px;
   box-sizing: border-box;
+  max-height: 100vh;
 }
 .info {
   position: relative;
   background: var(--frame);
   min-width: 300px;
-  min-height: 100px;
+  max-height: 100vh;
+  overflow-y: auto;
   border-radius: 7px;
   width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.imago {
+.info img {
   border-radius: 9px;
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);
-  max-width: 100%;
+  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter);
 }
 .infoTitle {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 0;
+  justify-content: center;
+  vertical-align: center;
+  gap: 15px;
+  padding: 20px auto 20px auto;
+}
+.whereAbouts {
+  color: var(--blue-fonts-lighter);
+  font-weight: bold;
+  font-size: large;
+  padding: 40px 0 40px 10px;
 }
 .modalCard {
   background-color: var(--white);
@@ -350,11 +356,31 @@ li::marker, .about-par b {
   margin-right: 7.5%;
 }
 .missionHead {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 10px;
+
 }
 .photoCenter {
   border-radius: 10px;
 }
+.missionExplain {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  text-align:justify;
+  padding: 0 7.5px;
+}
+.missionExplain b{
+  color:var(--blue-fonts-lighter);
+}
+.missionDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 
 /* Recomendations component*/
 .quoteBox {
