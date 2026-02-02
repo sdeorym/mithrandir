@@ -1,6 +1,8 @@
 import Card from "../DRY/Card"
 import Modal from "../DRY/Modal"
 import MissionModal from "../DRY/MissionModal"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 function Missions() {
     const missions = [

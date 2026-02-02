@@ -1,4 +1,4 @@
-// import './styles/App.css'
+import './styles/App.css'
 import Menu from './Components/Menu.jsx';
 import Slider from './Components/Slider.jsx';
 import About from './Components/About.jsx';
