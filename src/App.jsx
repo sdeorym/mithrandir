@@ -1,0 +1,50 @@
+// import './styles/App.css'
+import Menu from './Components/Menu.jsx';
+import Slider from './Components/Slider.jsx';
+import About from './Components/About.jsx';
+import Services from './Components/Services.jsx';
+import Missions from './Components/Missions.jsx';
+import Recomendations from './Components/Recomendations.jsx';
+import Contact from './Components/Contact.jsx';
+import Footer from './Components/Footer.jsx';
+// import Resumee from './Components/Resumee.jsx';
+
+function App() {
+ /* <section id="resumee">
+      <Resumee />
+    </section>
+ */
+
+  return (
+    <>
+      <header>
+        <Menu />
+      </header>
+      <main>
+        <section id="slide">
+          <Slider />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="missions">
+          <Missions />
+        </section>
+        <section id="recomendations">
+          <Recomendations />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  )
+}
+
+export default App
