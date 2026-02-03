@@ -23,7 +23,7 @@ return (
             <div className="missionExplain">
                 <p><b>Mission</b><br />{mission.mission}</p>
                 <p><b>Context</b><br />{mission.context}</p>
-                <p><b>Issue</b><br />{mission.issue}</p>
+                <p><b>Problématique</b><br />{mission.issue}</p>
                 <p><b>Rôle</b><br />{mission.role}</p>
                 <p><b>Result</b><br />{mission.result}</p>
                 <p><b>Stack</b><br />{mission.stack}</p>

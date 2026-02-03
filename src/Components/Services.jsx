@@ -53,7 +53,6 @@ function Services() {
     return (
         <>
             <h2>Nos services</h2>
-            <h3>Ce qu'on peut faire pour vous</h3>
             {serve.map((s) =>
                 <div className ="serving" key={s.id}>
                     <Service 

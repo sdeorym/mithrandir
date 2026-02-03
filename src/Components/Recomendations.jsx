@@ -31,7 +31,6 @@ function Recomendations() {
     return (
     <>
         <h2>Recomendations</h2>    
-        <h3>Ce qu'ils ont dit de ma performance</h3>
         <div className="quoteBox">
             {quotes.map((q, i) => 
                 <div className="quoting" key={i}>

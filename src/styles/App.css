@@ -55,6 +55,7 @@ header {
 }
 h1 {
   text-shadow: 1.25px 1.25px 2.5px var(--white);
+  font-size:50px;
 }
 #about, #missions, #contact/*, #resumee*/ {
   color: var(--gray-fonts);
@@ -69,7 +70,13 @@ h2, h3 {
   text-align: center;
 }
 h2 {
-  padding: 10px 0px;
+  padding: 10px 0px 30px 0px;
+}
+h3 {
+  font-style:italic;
+  font-size:25px;
+  text-shadow: 1.25px 1.25px 2.5px var(--gray-backs);
+
 }
 #about h2, #contact h2 {
   padding-bottom: 25px;
@@ -89,11 +96,11 @@ section {
   3.5px 3.5px 3.5px var(--gold),
   5px 5px 2.5px var(--blue-fonts-lighter);
   border-radius: 10px;
-  scroll-margin-top: 125px;
+  scroll-margin-top: 150px;
 }
 #slide {
   padding: 0;
-  margin-top: 125px;
+  margin-top: 150px;
 }
 /* Page menu specific styles*/
 header {
@@ -119,6 +126,7 @@ header h2 {
   padding: 0 15px;
 }
 .title {
+  font-family: 'PT Serif';
   padding: 15px;  
 }
 .title a {

@@ -55,7 +55,7 @@ function Menu() {
                     />            
                 </div>)}
         </div>
-        <h2>L'expérience et la qualité d'une grande société de consulting à votre portée.</h2>        
+        <h3>L'expérience et la qualité d'une grande société de consulting à votre portée.</h3>        
     </>)
 }
 
