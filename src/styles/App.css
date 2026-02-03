@@ -288,14 +288,19 @@ li::marker, .about-par b {
   position: relative;
   background: var(--frame);
   min-width: 300px;
-  max-height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 7px;
   width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
+  outline: none;
+  background-clip: padding-box;
+  box-shadow: none;
 }
+
 .info img {
   border-radius: 9px;
   box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter);
@@ -386,6 +391,8 @@ li::marker, .about-par b {
 .missionDescription {
   display: flex;
   flex-direction: column;
+  outline: none;
+  border: none;
   gap: 10px;
 }
 

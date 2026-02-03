@@ -3,6 +3,24 @@ import Modal from "../DRY/Modal"
 import MissionModal from "../DRY/MissionModal"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import CNRS from "../assets/images/modal/logo/cnrs.avif";
+import c2rmf from "../assets/images/modal/logo/c2rmf.avif";
+import shcp from "../assets/images/modal/logo/shcp.avif";
+import aeromex from "../assets/images/modal/logo/aeromexico.avif";
+import boozAllen from "../assets/images/modal/logo/boozAllen.avif";
+import ipanema from "../assets/images/modal/logo/ipanema.avif"
+import idrisS from "../assets/images/modal/cardImages/small/cnrsIdris.avif";
+import idris from "../assets/images/modal/cardImages/normal/cnrsIdris.avif";
+import aglaePosicionadorS from "../assets/images/modal/cardImages/small/c2rmf.avif";
+import aglaePosicionador from "../assets/images/modal/cardImages/normal/c2rmf.avif"
+import pesosS from "../assets/images/modal/cardImages/small/shcp.avif";
+import pesos from "../assets/images/modal/cardImages/normal/shcp.avif";
+import avionS from "../assets/images/modal/cardImages/small/aeromexico.avif";
+import avion from "../assets/images/modal/cardImages/normal/aeromexico.avif";
+import IFES from "../assets/images/modal/cardImages/small/boozAllen.avif";
+import IFE from "../assets/images/modal/cardImages/normal/boozAllen.avif";
+import soleilS from "../assets/images/modal/cardImages/small/ipanema.avif"
+import soleil from "../assets/images/modal/cardImages/normal/ipanema.avif"
 
 function Missions() {
     const missions = [
@@ -17,10 +35,10 @@ function Missions() {
             "result": "Application livrée en production, performant. Réduction des délais de workflow d'approbation de quelques jours a moins de 24h. Base saine, maintenable et bien documentée, équipe autonome pour les évolutions futures.",
             "stack": "Python Django RDF PostgresSQL Docker Apache Ubuntu",
             "alterTech": "RabbitMQ, LDAP, OAuth2",
-            "image": "../src/assets/images/modal/cardImages/normal/cnrsIdris.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/cnrsIdris.avif", 
+            "image": idris,
+            "imageS": idrisS, 
             "imageAlt": "Image du supercalculateur Jean Zay",
-            "logo": "../src/assets/images/modal/logo/cnrs.avif",
+            "logo": CNRS,
             "logoAlt": "Logo du CNRS"
         },
         {
@@ -34,10 +52,10 @@ function Missions() {
             "result": "Choix d'un positionneur hexapode capable de positionner le plupart des objets d'une façon plus économique un bras robot. (dizaine de milliers d'euros versus millions). Développement d'une application avec une interface avec un scanner qui numérise une carte de l'objet sous analyse, Utilisation des modèles de rotation basés sur les angles d'Euler pour faire l'hexapode suivre la carte. Application livrée en production, performante et économique. L'automatisation permet maintenant l'utilisation 24h sur 24 de l'accélérateur, optimisant sa vie technique.",
             "stack": "Outils propriétaires sur Windows, en particulier LabView, qui s'interface avec le reste de l'architecture de New Aglae.",
             "alterTech": "",
-            "image": "../src/assets/images/modal/cardImages/normal/c2rmf.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/c2rmf.avif",
+            "image": aglaePosicionador,
+            "imageS": aglaePosicionadorS,
             "imageAlt": "Image de Aglae, accélérateur de particles du C2RMF.",
-            "logo": "../src/assets/images/modal/logo/c2rmf.avif",
+            "logo": c2rmf,
             "logoAlt": "Logo du C2RMF"
         },
         {
@@ -51,10 +69,10 @@ function Missions() {
             "result": "Une opération stable, avec une évolution claire basé en un 'roadmap' à cinq ans.",
             "stack": "Plusieurs architectures sans une vision intégrale, mais basé en systèmes ouverts (surtout Hewlett Packard).",
             "alterTech": "",
-            "image": "../src/assets/images/modal/cardImages/normal/shcp.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/shcp.avif",
+            "image": pesos,
+            "imageS": pesosS,
             "imageAlt": "Image de monnaie et billets du Méxique.",
-            "logo": "../src/assets/images/modal/logo/shcp.avif",
+            "logo": shcp,
             "logoAlt": "Logo de SHCP"
         },
         {
@@ -68,10 +86,10 @@ function Missions() {
             "result": "Réduction de coûts d’informatique en un 10%. Optimisation des routes avec un plan de tarification nouveau, basé en l’histoire de vols précédents.",
             "stack": "Système de réservations mainframe SABRE aux États Unis, le reste de l’opération dans notre centre au Mexique avec systèmes Sun.",
             "alterTech": "",
-            "image": "../src/assets/images/modal/cardImages/normal/aeromexico.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/aeromexico.avif",
+            "image": avion,
+            "imageS": avionS,
             "imageAlt": "Image d'avion d'Aeromexico en vol",
-            "logo": "../src/assets/images/modal/logo/aeromexico.avif",
+            "logo": aeromex,
             "logoAlt": "Logo de Aeromexico"
         },
         {
@@ -85,10 +103,10 @@ function Missions() {
             "result": "Applications livré en temps. Base de données totalement renouvelée et fiable. Nouvelle identification de citoyens qu'on utilise toujours trente ans après.",
             "stack": "AIX,Oracle, C",
             "alterTech": "",
-            "image": "../src/assets/images/modal/cardImages/normal/boozAllen.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/boozAllen.avif",
+            "image": IFE,
+            "imageS": IFES,
             "imageAlt": "Image de carte d'électeur du Mexique",
-            "logo": "../src/assets/images/modal/logo/boozAllen.avif",
+            "logo": boozAllen,
             "logoAlt": "Logo de Booz Allen"
         },
         {
@@ -102,10 +120,10 @@ function Missions() {
             "result": "Application livrée en production, stable et performant, équipe autonome pour les évolutions futures.",
             "stack": "C++, MicroManager (outil propriétaire), Windows",
             "alterTech": "",
-            "image": "../src/assets/images/modal/cardImages/normal/ipanema.avif",
-            "imageS": "../src/assets/images/modal/cardImages/small/ipanema.avif",
+            "image": soleil,
+            "imageS": soleilS,
             "imageAlt": "Image du synchrotron Soleil à Gif-sur-Yvette",
-            "logo": "../src/assets/images/modal/logo/ipanema.avif",
+            "logo": ipanema,
             "logoAlt": "Logo de Ipanema"
         },
     ]
