@@ -343,7 +343,7 @@ li::marker, .about-par b {
   height: auto;
 }
 .modalCard:hover {
-  box-shadow: 1px 1px 1px var(--gray-backs);
+  box-shadow: 1px 1px 1px var(--blue-fonts-lighter);
 }
 .modalCard img {
   max-width: 100%;
