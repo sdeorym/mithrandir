@@ -105,9 +105,8 @@ section {
   border-radius: 10px;
   scroll-margin-top: 150px;
 }
-#slide {
-  padding: 0;
-}
+
+
 /* Page menu specific styles*/
 header {
   background-color: var(--gray-backs);
@@ -198,7 +197,6 @@ header h2 {
   color: var(--blue-fonts-lighter);
   top: 90%;
   right: 5%;
-
   font-size: 40px;
   font-weight: bold;
 }
@@ -207,6 +205,28 @@ header h2 {
 }
 .sliderWindow--display {
   animation: slide 1s forwards;
+}
+#slide {
+  padding: 0;  
+}
+
+.arrows {
+  z-index: 100;
+  color: var(--blue-fonts-lighter);
+  display: flex;
+  flex-direction: row;
+  border: none;
+  bottom: 50%;
+  position: absolute;
+  background: none;
+  /*left: 16px;
+  right: 1600px;*/
+}
+.leftie {
+  left: 16px;
+}
+.rightie {
+  right: -905px;
 }
 
 /* About */
@@ -395,9 +415,10 @@ li::marker, .about-par b {
 .missionExplain {
   display: flex;
   flex-direction: column;
-  gap: 7.5px;
+  gap: 15px;
   text-align:justify;
   padding: 0 7.5px;
+  margin-top: 10px;
 }
 .missionExplain b{
   color:var(--blue-fonts-lighter);
