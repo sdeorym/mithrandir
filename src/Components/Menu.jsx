@@ -22,8 +22,8 @@ function Menu() {
         },
         {
             "id": "3",
-            "value": "recomendations",
-            "title": "Recomendations",
+            "value": "recommendations",
+            "title": "Recommendations",
             "hashtag": "#recomendations"
         },
 /*        {

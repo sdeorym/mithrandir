@@ -1,6 +1,6 @@
 import Quote from "../DRY/Quote"
 
-function Recomendations() {
+function Recommendations() {
     const quotes = [
         {
             "id": "0",
@@ -30,7 +30,7 @@ function Recomendations() {
     ]
     return (
     <>
-        <h2>Recomendations</h2>    
+        <h2>Recommendations</h2>    
         <div className="quoteBox">
             {quotes.map((q, i) => 
                 <div className="quoting" key={i}>
@@ -44,4 +44,4 @@ function Recomendations() {
     </>
 )}
 
-export default Recomendations
+export default Recommendations

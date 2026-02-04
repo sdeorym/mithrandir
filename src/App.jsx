@@ -5,7 +5,7 @@ import Hero from './Components/Hero.jsx';
 import About from './Components/About.jsx';
 import Services from './Components/Services.jsx';
 import Missions from './Components/Missions.jsx';
-import Recomendations from './Components/Recomendations.jsx';
+import Recommendations from './Components/Recommendations.jsx';
 import Contact from './Components/Contact.jsx';
 import Footer from './Components/Footer.jsx';
 // import Resumee from './Components/Resumee.jsx';
@@ -38,7 +38,7 @@ function App() {
           <Slider />
         </section>        
         <section id="recomendations">
-          <Recomendations />
+          <Recommendations />
         </section>
         <section id="contact">
           <Contact />

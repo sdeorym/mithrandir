@@ -432,7 +432,7 @@ li::marker, .about-par b {
 }
 
 
-/* Recomendations component*/
+/* Recommendations component*/
 .quoteBox {
   display: flex;
   flex-wrap: wrap;
