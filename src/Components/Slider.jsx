@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-import confiance from "../assets/images/slider/00-nube-logos.avif"; 
+/* import { useEffect, useState } from "react";
 import aglae from "../assets/images/slider/01-aglae.avif";
 import synchrotron from "../assets/images/slider/02-synchrotron.avif";
 import jeanZay from "../assets/images/slider/03-JeanZay.avif";
 import motors from "../assets/images/slider/04-gm.avif";
-import aircraft from "../assets/images/slider/05-aeromexico.avif";
+import aircraft from "../assets/images/slider/05-aeromexico.avif";*/
+import confiance from "../assets/images/slider/00-nube-logos.avif"; 
+
 
 function Slider() {
-    const [index, setIndex] = useState(0);
+    /*const [index, setIndex] = useState(0);
 
     const slides = [
         {
@@ -49,17 +50,15 @@ function Slider() {
     ]
     const nextCard = () => { 
         setTimeout( () => setIndex(index < (slides.length - 1) ? index+1 : 0), 3000 );}; 
-    useEffect(() => { nextCard(); }, [index]);
+    useEffect(() => { nextCard(); }, [index]);*/
 
     return (
         <>
             <div className="slideShow">
-                {slides.map ((s) =>                               
-                    <div key={s.id} className={`sliderWindow sliderWindow--${Number(s.id) === index ? "display" : "hide"}`}>
-                        <span>{s.concept}</span>                    
-                        <img src={s.source} alt={s.alt}></img>
-                    </div>
-                )}            
+                <div className="sliderWindow">
+                    <span>Ils nous ont fait confiance</span>
+                    <img src={confiance} alt="Logos des entreprises où Luis Arean a fait ses services."></img>
+                </div>                        
             </div>            
         </>
     )

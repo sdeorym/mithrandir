@@ -5,10 +5,9 @@
   --blue-fonts-lighter: #001176;
   --blue-fonts-lighter-blurred: rgba(0, 17, 118, 0.5);  
   --white: #e7f1f0;
-  --frame: #d1d7d5;
-  --gold: #ffb400;
-  --pale-gold: #feff9c;
-  /*--blue-and-gray-wave: linear-gradient(135deg, var(--blue-fonts-lighter) 60%, var(--gray-backs));
+  --yellow-postit: rgba(254, 255, 181,.75);
+  /*--frame: #d1d7d5; eef5f4 f2f6f5 f0f4f3
+  --blue-and-gray-wave: linear-gradient(135deg, var(--blue-fonts-lighter) 60%, var(--gray-backs));
   Check grey-pilgrim before using it with light colours.*/
 }
 @font-face {
@@ -47,25 +46,33 @@ body {
   width: 100%;
   background-color: var(--white);
 }
-header {  
+/*header {  
   box-shadow:
     1.25px 1.25px 2.5px var(--gray-fonts),
     2.5px 2.5px 2.5px var(--gray-backs),
     5px 5px 2.5px var(--blue-fonts-lighter);
-}
+}*/
 h1 {
-  text-shadow: 1.25px 1.25px 2.5px var(--white);
+  /*text-shadow: 1.25px 1.25px 2.5px var(--gold);*/
   font-size:50px;
 }
-#about, #missions, #contact/*, #resumee*/ {
-  color: var(--gray-fonts);
-  background: linear-gradient(240deg, var(--gray-backs) 69%, var(--gray-backs-blurred), var(--blue-fonts-lighter));
-}
-#services, #recomendations {
+/*#about, #missions, #recomendations/*, #resumee*/ /*{
+  color: var(--gray-fonts);}
+  /*background: linear-gradient(240deg, var(--gray-backs) 69%, var(--gray-backs-blurred), var(--blue-fonts-lighter));*/
+
+#hero {
   color: var(--white);
   background-color: var(--blue-fonts-lighter);
-  background: linear-gradient(177.5deg, var(--blue-fonts-lighter) 48%, var(--blue-fonts-lighter-blurred), var(--gray-backs));
+  margin-top: 100px;
+  /*background: linear-gradient(177.5deg, var(--blue-fonts-lighter) 48%, var(--blue-fonts-lighter-blurred), var(--gray-backs));*/
 }
+#hero h2 {
+  font-size: 25px
+}
+#hero p {
+  padding: 0px 75px;
+}
+
 h2, h3 {
   text-align: center;
 }
@@ -75,7 +82,7 @@ h2 {
 h3 {
   font-style:italic;
   font-size:25px;
-  text-shadow: 1.25px 1.25px 2.5px var(--gray-backs);
+  /*text-shadow: 1.25px 1.25px 2.5px var(--gold);*/
 
 }
 #about h2, #contact h2 {
@@ -91,21 +98,20 @@ h3 {
 section {
   padding: 25px 20px;
   margin: 1.75% 10%;
-  box-shadow:
+  /*box-shadow:
   1.25px 1.25px 2.5px var(--gray-fonts),
   3.5px 3.5px 3.5px var(--gold),
-  5px 5px 2.5px var(--blue-fonts-lighter);
+  5px 5px 2.5px var(--blue-fonts-lighter);*/
   border-radius: 10px;
   scroll-margin-top: 150px;
 }
 #slide {
   padding: 0;
-  margin-top: 150px;
 }
 /* Page menu specific styles*/
 header {
-  background-color: var(--gray-fonts);
-  color: var(--white);
+  background-color: var(--gray-backs);
+  color: var(--gray-fonts);
   position: fixed; 
   top: 0;          
   left: 0;         
@@ -115,7 +121,7 @@ header {
    
 }
 header h2 {
-  text-shadow: 0.75px 0.75px 1px var(--white);
+  /*text-shadow: 0.75px 0.75px 1px var(--white);*/
   padding: 5px;
 }
 .front {
@@ -136,7 +142,8 @@ header h2 {
 .taggingSections {
   height: 25px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  margin-top: 5px; 
   gap: 50px;
   justify-content: space-around;
   padding: 20px 15px 20px 0;
@@ -149,21 +156,22 @@ header h2 {
   border: none;
   font-family: 'LibreBaskerville', sans-serif;
   font-style:normal;
-  box-shadow: 2px 2px 2.75px var(--gold);
+  /*box-shadow: 2px 2px 2.75px var(--gold);*/
 }
 .taggingSections button:hover {
   scale: 1.25;
   width: 125px;
   border-radius: 4%;
-  box-shadow: 2px 2px 2.75px var(--gold);
+  /*box-shadow: 2px 2px 2.75px var(--gold);*/
 }
 
 /* Slider styles*/
 .slideShow {
   position: relative;
-  width: 1228px;
-  height: 758.96px;
+  width: 921px;
+  height: 569.22px;
   overflow: hidden;
+  margin: 0 auto;
 }
 .sliderWindow {
   position: absolute;
@@ -171,7 +179,8 @@ header h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  text-align: start;
+
+  /*text-align: start;*/
 }
 .sliderWindow img {
   z-index: 0;
@@ -186,12 +195,11 @@ header h2 {
   position: absolute;
   z-index: 10;
   font-family: 'LibreBaskerville' sans-serif;
-  -webkit-text-stroke: 2.5px var(--gray-fonts);;
-  color: var(--gold);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 49.5px;
+  color: var(--blue-fonts-lighter);
+  top: 90%;
+  right: 5%;
+
+  font-size: 40px;
   font-weight: bold;
 }
 .sliderWindow--hide {
@@ -226,6 +234,9 @@ li::marker, .about-par b {
   flex-direction: row;
   justify-content:space-between;
 }
+.frame {
+  margin: 30px 0;
+}
 
 /* Services component*/
 .serving {
@@ -242,7 +253,7 @@ li::marker, .about-par b {
   border-radius: 12px;
   height: auto;
   padding: 15px;
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);
+  /*box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
   gap: 5px;
   text-align: Justify;
 }
@@ -286,7 +297,7 @@ li::marker, .about-par b {
 }
 .info {
   position: relative;
-  background: var(--frame);
+  background: var(--white);
   min-width: 300px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -299,11 +310,12 @@ li::marker, .about-par b {
   outline: none;
   background-clip: padding-box;
   box-shadow: none;
+  padding: 0;
 }
 
 .info img {
   border-radius: 9px;
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter);
+  /*box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter);*/
 }
 .infoTitle {
   display: flex;
@@ -321,7 +333,7 @@ li::marker, .about-par b {
 }
 .modalCard {
   background-color: var(--white);
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter);
+  box-shadow: 1px 1px 1px var(--gray-backs);
   border-radius: 10px;
   padding: 4%;
   display: flex;
@@ -337,7 +349,7 @@ li::marker, .about-par b {
 }
 .tinyImage {
   border-radius: 9px;
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);
+  /*box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
 }
 .tinyLogo {
   width: 50px;
@@ -406,10 +418,10 @@ li::marker, .about-par b {
 
 .quoting {
   flex: 1 1 300px; /* 300px minimum, it adapts itself */
-  background-color: var(--pale-gold);  
+  background-color: var(--yellow-postit);  
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);
+  /*box-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
 }
 .whatTheySaid {
   color: var(--gray-fonts);
@@ -437,18 +449,18 @@ blockquote span {
   font-style: italic;
   padding: 15px;
   color:var(--blue-fonts-lighter);
-  text-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);
+  /*text-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
 }
 
 footer {
   height: auto;
-  background-color: var(--gray-fonts);
-  color: var(--white);
+  background-color: var(--gray-backs);
+  color: var(--gray-fonts);
   padding: 20px;
   text-align: center;  
 }
 
 .contactAddress {
   color: var(--blue-fonts-lighter);
-  text-shadow: 1.25px 1.25px 2.5px var(--gold);
+  /*text-shadow: 1.25px 1.25px 2.5px var(--gold);*/
 }
