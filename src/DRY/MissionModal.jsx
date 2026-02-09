@@ -1,14 +1,6 @@
 function MissionModal({mission}) {
 
 const fields=["Mission", "Context", "Issue", "Role", "Result", "Stack"]
-/* {fields.map(field =>
-                <div className="fieldInformation">
-                    <p><b className="fieldTitle">{field}:</b> <span>{mission.{field}}
-                    {isLong && (
-                    <Button classname={"readMore"} onClick={() => setExpanded(!expanded)} title={expanded ? "Voir moins" : "Voir plus…"} /></span>
-                )}</p>
-                </div>
-            )}*/
 
 return (
     <>  

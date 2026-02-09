@@ -1,0 +1,144 @@
+.missionBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+/*** CARD ***/
+.modalCard {
+  background-color: var(--white);  
+  border-radius: 10px;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 3px;
+  height: auto;
+}
+.modalCard:hover {
+  box-shadow: 1px 1px 1px var(--blue-fonts-lighter);
+}
+.modalCard img {
+  max-width: 100%;
+  height: auto;
+}
+.tinyImage {
+  border-radius: 9px;
+}
+.whatIDid {
+  text-align: justify;
+  padding: 7.5px 0;
+}
+.institution {
+  font-weight: bold;
+  color:var(--blue-fonts-lighter)
+}
+.description {
+  font-size: 13px;
+}
+.tinyLogo {
+  width: 50px;
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin: 5px auto;
+}
+.iconBlue {
+  padding-left: 96%;
+  padding-bottom: auto;
+  color:var(--blue-fonts-lighter);
+}
+
+/*** MODAL ***/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--blue-fonts-lighter-blurred); /* color sombreado */
+  z-index: 1000;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+.info {
+  position: relative;
+  background: var(--white);
+  min-width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 7px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-clip: padding-box;
+  box-shadow: none;
+  padding: 0;
+}
+.info img {
+  border-radius: 9px;
+}
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 7.5%;
+}
+
+/*** MISSION MODAL ***/
+.missionDescription {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  border: none;
+  gap: 10px;
+}
+.missionHead {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 10px;
+}
+.infoTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: center;
+  gap: 15px;
+  padding: 20px auto 20px auto;
+}
+.photoCenter {
+  border-radius: 10px;
+}
+.whereAbouts {
+  color: var(--blue-fonts-lighter);
+  font-weight: bold;
+  font-size: large;
+  padding: 40px 0 40px 10px;
+}
+.missionExplain {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align:justify;
+  padding: 0 7.5px;
+  margin-top: 10px;
+}
+.missionExplain b{
+  color:var(--blue-fonts-lighter);
+}

@@ -1,3 +1,4 @@
+import '../styles/Missions.css'
 import Card from "../DRY/Card"
 import Modal from "../DRY/Modal"
 import MissionModal from "../DRY/MissionModal"
@@ -127,33 +128,6 @@ function Missions() {
             "logoAlt": "Logo de Ipanema"
         },
     ]
-    /*<Modal key={mission.id} Content={<MissionModal mission={mission} />}>
-            {({setIsOpened}) => ( 
-              <Card 
-                onClick={() => setIsOpened(true)}
-                institution={mission.institution}
-                title={mission.title}
-                mission={mission.mission}
-                image={mission.imageS}
-                imageAlt={mission.imageAlt}
-                logo={mission.logo}
-                logoAlt={mission.logoAlt}
-              />
-            )}
-          </Modal>*/
-
-    /*(<div key={mission.id}>
-            <Card 
-              onClick={() => setIsOpened(true)}
-              institution={mission.institution}
-              title={mission.title}
-              mission={mission.mission}
-              image={mission.imageS}
-              imageAlt={mission.imageAlt}
-              logo={mission.logo}
-              logoAlt={mission.logoAlt}
-            />
-          </div>)*/
   return (
     <>
       <h2>Nos missions</h2>

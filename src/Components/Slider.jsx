@@ -6,6 +6,7 @@ import aircraft from "../assets/images/slider/05-aeromexico.avif";*/
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
+import '../styles/Slider.css'
 import confiance from "../assets/images/slider/00-nube-logos.avif";
 import wordcloud from "../assets/images/slider/01-wordcloud.avif";
 import Button from "../DRY/Button"

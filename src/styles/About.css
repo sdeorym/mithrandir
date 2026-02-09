@@ -1,0 +1,32 @@
+.all-about {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.photo-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.frame {
+  display: flex;
+  flex-direction: column;
+  padding: 0 auto;
+}
+.footnote {
+  margin: 0 auto;
+}
+.about-par {
+  padding: 7.5px 0;
+}
+.interventions {
+  padding: 10px 25px;
+  align-self: center;
+}
+.interventions li {
+  margin: 10px 0 10px 50px;
+  padding-left: 25px;
+}
+li::marker, .about-par b {
+  color:var(--blue-fonts-lighter);
+}

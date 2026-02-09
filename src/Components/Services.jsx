@@ -1,3 +1,4 @@
+import '../styles/Services.css'
 import Service from "../DRY/Service"
 
 function Services() {
@@ -38,13 +39,13 @@ function Services() {
             "content": (<>Amélioration de la capacité collective à livrer avec fiabilité, prévisibilité et pragmatisme.</>)
         },
         {
-            "id" : "6",
+            "id" : "7",
             "service": (<>Accompagnement équipes, <i>mentoring</i></>),
             "content": (<>
                             Emphase en la collectivité, pas les individus ; transmission du raisonnement, apprentissage sur cas réels.</>)
         }, 
         {
-            "id" : "7",
+            "id" : "8",
             "service": (<>Accompagnement CTO</>),
             "content": (<>Amélioration de la capacité collective à livrer avec fiabilité, prévisibilité et pragmatisme.</>)
         },

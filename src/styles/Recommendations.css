@@ -1,0 +1,39 @@
+.quoteBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.quoting {
+  flex: 1 1 300px; /* 300px minimum, it adapts itself */
+  background-color: var(--gray-backs-blurred);  
+  padding: 20px;
+  border-radius: 12px;
+}
+.whatTheySaid {
+  color: var(--gray-fonts);
+  font-family: 'LibreBaskerville', sans-serif;
+  font-style:normal;
+  text-shadow: none;
+}
+.readMore {
+  background: none;
+  border: none;
+  color: var(--blue-fonts-lighter);
+  cursor: pointer;
+  padding: 0;
+}
+/* Unsorted boxes */
+.quoting:nth-child(odd) {
+  transform: translateY(clamp(-0.5rem, 1rem, 2vh));
+}
+blockquote p {
+  font-family: 'PT Serif';
+  text-align: justify; 
+  padding-bottom: 10px;
+}
+blockquote span {
+  font-style: italic;
+  padding: 15px;
+  color:var(--blue-fonts-lighter);
+  /*text-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
+}

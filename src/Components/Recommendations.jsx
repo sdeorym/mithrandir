@@ -1,3 +1,4 @@
+import '../styles/Recommendations.css'
 import Quote from "../DRY/Quote"
 
 function Recommendations() {

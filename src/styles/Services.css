@@ -1,0 +1,22 @@
+.serving {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 7.5px 8%;
+}
+.serving-details {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--gray-fonts);
+  border-radius: 12px;
+  height: auto;
+  padding: 15px;
+  gap: 5px;
+  text-align: Justify;
+}
+.serving-details h4 {
+  font-weight: bold;
+  color: var(--blue-fonts-lighter);
+  font-size: 24px;
+}

@@ -1,8 +1,8 @@
-function Button({value, title, classname, buttonType, dataTestId, onClick}) {
+function Button({value, title, classname, buttonType, dataTestId, onClick, disabled}) {
 
     return (
         <>
-            <button value={value} className={classname} type={buttonType} data-testid={dataTestId} onClick={onClick}>{title}</button>
+            <button value={value} className={classname} type={buttonType} data-testid={dataTestId} disabled={disabled} onClick={onClick}>{title}</button>
         </>
     )
 }
