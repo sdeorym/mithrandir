@@ -9,8 +9,10 @@ function About() {
                 <div className="photo-frame">
                     <div className="frame">
                         <img src={luis} alt="Luis Arean, consultant"></img>
-                        <p className="footnote"><b>Luis Arean</b><br />
-                        <span>Consultant senior</span></p>
+                        <div className="footnote">
+                            <span className="footName">Luis Arean</span><br />
+                            <span>Consultant senior</span>
+                        </div>
                     </div>
                     <div className="about-par">
                         <p>J’interviens aussi bien en renfort opérationnel du dévéloppement Python / React que sur des missions de cadrage, d’audit ou de reprise de projets existants (legacy, dette technique, performance, sécurité).</p>

@@ -11,10 +11,15 @@
 .frame {
   display: flex;
   flex-direction: column;
-  padding: 0 auto;
+  align-content: center;
+  gap: 1em;
+
 }
 .footnote {
-  margin: 0 auto;
+  text-align: center;
+}
+.footName {
+  font-weight:bold;
 }
 .about-par {
   padding: 7.5px 0;
@@ -30,3 +35,5 @@
 li::marker, .about-par b {
   color:var(--blue-fonts-lighter);
 }
+
+

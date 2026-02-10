@@ -1,4 +1,4 @@
-function Button({value, title, classname, buttonType, dataTestId, onClick, disabled}) {
+function Button({data, value, title, classname, buttonType, dataTestId, onClick, disabled}) {
 
     return (
         <>
