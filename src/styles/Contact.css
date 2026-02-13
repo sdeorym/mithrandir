@@ -38,6 +38,9 @@ input, textarea {
   padding: 12px;
   font-family: Arial;
 }
+input::placeholder, textarea::placeholder {
+  color: (--mixed-gray);
+}
 .submit {
   height: 40px;
   width: 40%;
@@ -55,4 +58,8 @@ input, textarea {
   background-color:var(--blue-fonts-lighter);
   color:var(--white);
   font-weight: bold;
+}
+
+iframe {
+  display: none;
 }

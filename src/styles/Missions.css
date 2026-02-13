@@ -53,13 +53,13 @@
 }
 
 /*** MODAL ***/
-.overlay {
+/*.overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--blue-fonts-lighter-blurred); /* color sombreado */
+  background: var(--blue-fonts-lighter-blurred);
   z-index: 1000;
 }
 .modal {
@@ -72,7 +72,7 @@
   z-index: 10000;
   box-sizing: border-box;
   max-height: 100vh;
-}
+}*/
 .info {
   position: relative;
   background: var(--white);

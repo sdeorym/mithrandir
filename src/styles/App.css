@@ -1,9 +1,10 @@
 :root { /* Colours of the page. */
   --gray-fonts: #11111b;
   --gray-backs: #bbbdba;
+  --mixed-gray: #66676a;
   --gray-backs-blurred: rgba(187, 189, 186, 0.5);
   --blue-fonts-lighter: #001176;
-  --blue-fonts-lighter-blurred: rgba(0, 17, 118, 0.5);  
+  --blue-fonts-lighter-blurred: rgba(0, 17, 118, 0.5); 
   --white: #e7f1f0;
   --yellow-postit: rgba(254, 255, 181,.75);
 }
@@ -144,4 +145,26 @@ footer {
   color: var(--gray-fonts);
   padding: 20px;
   text-align: center;  
+}
+
+/*** MODAL -SE USA EN DOS COMPONENTES DISTINTOS***/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--blue-fonts-lighter-blurred); /* color sombreado */
+  z-index: 1000;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  box-sizing: border-box;
+  max-height: 100vh;
 }
