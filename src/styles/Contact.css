@@ -59,7 +59,26 @@ input::placeholder, textarea::placeholder {
   color:var(--white);
   font-weight: bold;
 }
-
 iframe {
   display: none;
+}
+.onArrival {
+  position: relative;
+  background: var(--white);
+  overflow: hidden;
+  border-radius: 7px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  background-clip: padding-box;
+  box-shadow: none;
+  padding: 1.5rem;
+  margin: 25vh 25vw;
+}
+.onArrival p {
+  font-size:17.5px;
 }
