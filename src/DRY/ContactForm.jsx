@@ -5,7 +5,11 @@ import Button from "./Button";
 
 function ContactForm({stateModal, changeStateModal}) {
     const [formData, setFormData] = useState({username: '', email: '', message: ''});
-    const [renderModal, setRenderModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    /*function handleModal() {
+        setShowModal(true);
+    }*/
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,14 +39,15 @@ function ContactForm({stateModal, changeStateModal}) {
             const result = await response.json();
             console.log(result);
             alert("Message envoyé avec succès");
-            /*handleModal(); 
-            changeStateModal(true);
-            setRenderModal(true);*/         
+            setFormData({username: '', email: '', message: ''});
+            e.target.reset();
+            // handleModal();         
         }
         catch(error) {
             alert("L'envoi du message a échoué. Veuilllez essayer plus tard.");
             // handleModal();
-            }}
+            }
+    }
 
     return (
         <>
@@ -68,8 +73,8 @@ function ContactForm({stateModal, changeStateModal}) {
                     data={formData} 
                 />               
             </form>
-            <iframe name="hidden_iframe"/>
-            {stateModal && (
+            {/*<iframe name="hidden_iframe"/>
+            {showModal && (
                 <div className="overlay">
                     <div className="modal">
                         <div className="onArrival">
@@ -83,7 +88,7 @@ function ContactForm({stateModal, changeStateModal}) {
                         </div>
                     </div>
                 </div>
-            )}
+            )}*/}
         </>
     );
 }
