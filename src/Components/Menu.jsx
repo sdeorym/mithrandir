@@ -70,9 +70,9 @@ function Menu() {
             </div>
 
             {/* MENU DESKTOP */}
-            <div className="desktop-menu">
+            <div className="taggingSections">
                 {buttonry.map((item) =>
-                    <div className="taggingSections" key={item.id}>         
+                    <div key={item.id}>         
                         <Button 
                             value={item.value}
                             title={item.title}
