@@ -37,3 +37,11 @@ blockquote span {
   color:var(--blue-fonts-lighter);
   /*text-shadow: 1.25px 1.25px 2.5px var(--blue-fonts-lighter-blurred);*/
 }
+
+@media (max-width: 767px) {
+  .whatTheySaid {
+    text-align: left;    
+    align-self: flex-start;
+    text-justify: none;   
+  }
+}

@@ -45,7 +45,7 @@ body {
   background-color: var(--white);
 }
 h1 {
-  font-size:50px;
+  font-size: clamp(30px, 4vw, 50px);
 }
 h2, h3 {
   text-align: center;
@@ -112,30 +112,40 @@ header h2 {
   all: unset;
   cursor: pointer;
 }
+.desktop-menu{
+  display: block;
+}
 .taggingSections {
-  height: 25px;
   display: flex;
   flex-direction: row;
   margin-top: 5px; 
   gap: 50px;
-  justify-content: space-around;
   padding: 20px 15px 20px 0;
 }
 .taggingSections button {
   background-color:var(--gray-backs);
   color:var(--gray-fonts);
-  height: 25px;
   width: 110px;  
   border: none;
   font-family: 'LibreBaskerville', sans-serif;
   font-style:normal;
+  transition: all 0.2s ease;
 }
 .taggingSections button:hover {
   background-color:var(--blue-fonts-lighter);
   color:var(--white);
-  scale: 1.5;
   width: 150px;
   border-radius: 5px;
+  transform: scale(1.25);
+}
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.mobile-menu {
+  display: none;
+
 }
 
 /* Footer */
@@ -167,4 +177,57 @@ footer {
   z-index: 10000;
   box-sizing: border-box;
   max-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  header {
+      height: auto;
+      margin-bottom: 100px; 
+  }
+  .webtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu{
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top:55px;
+    left:0;
+    width:60%;
+    background-color:var(--gray-backs);
+    z-index:9999;
+    align-items: flex-start;
+    padding-left: 5px;         /* separa del borde izquierdo */
+    padding-top: 20px;
+  }
+  .menu-mobile-button {
+    width: 100%;           
+    max-width: 300px;     
+    padding: 15px 20px;   
+    font-size: 20px;
+    margin: 10px 0;       
+    border-radius: 8px;   
+    background-color: var(--gray-backs);
+    color: var(--gray-fonts);
+    transition: all 0.5s ease;
+    border: none;
+    text-align: left;
+    display: block; 
+  }
+  .menu-mobile-button:hover {
+    background-color: var(--blue-fonts-lighter);
+    color: var(--white);
+    transform: scale(1.05);
+  }
 }

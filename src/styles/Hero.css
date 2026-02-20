@@ -2,11 +2,16 @@
   color: var(--white);
   background-color: var(--blue-fonts-lighter);
   margin-top: 100px;
-  /*background: linear-gradient(177.5deg, var(--blue-fonts-lighter) 48%, var(--blue-fonts-lighter-blurred), var(--gray-backs));*/
 }
 #hero h2 {
   font-size: 25px
 }
 #hero p {
   padding: 0px 75px;
+}
+
+@media (max-width: 767px) {
+  #hero p {
+    padding: 0px 5%;
+  }
 }

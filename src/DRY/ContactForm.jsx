@@ -7,10 +7,6 @@ function ContactForm({stateModal, changeStateModal}) {
     const [formData, setFormData] = useState({username: '', email: '', message: ''});
     const [showModal, setShowModal] = useState(false);
 
-    /*function handleModal() {
-        setShowModal(true);
-    }*/
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         console.log(name, value);
@@ -23,7 +19,7 @@ function ContactForm({stateModal, changeStateModal}) {
         const dataToSend = {username: formData.username, email: formData.email, message: formData.message};
         const stringifiedJsonData = JSON.stringify(dataToSend);
         try {
-            const url="https://api.lpgconsulting.fr/send-email";
+            const url="https://lpgconsulting.fr/send-email";
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {

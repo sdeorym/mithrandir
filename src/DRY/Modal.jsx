@@ -5,13 +5,7 @@ import Button from "./Button"
 
 function Modal({opened, Content, children}) {
     const [isOpened, setIsOpened] = useState(opened);
-/*                         <button
-                            type="button"
-                            data-testid="close-modal"
-                            
-                        >
-                            <FontAwesomeIcon icon={ faX } className="closing-icon" />
-                        </button>*/
+
     return (
         <>  
             {children({ isOpened, setIsOpened })}
@@ -25,7 +19,7 @@ function Modal({opened, Content, children}) {
                                 onClick={() => setIsOpened(false)}
                                 title={<FontAwesomeIcon icon={ faX } className="closing-icon"/>}
                                 classname="iconBlue iconButton"
-                                />
+                                aria="Fermer la fenêtre modale"                                />
                             {Content}
                         </div>
                     </div>

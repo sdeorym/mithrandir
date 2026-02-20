@@ -6,7 +6,7 @@
 .photo-frame {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 .frame {
   display: flex;
@@ -36,4 +36,20 @@ li::marker, .about-par b {
   color:var(--blue-fonts-lighter);
 }
 
-
+@media (max-width: 768px) {
+  .photo-frame {
+    flex-direction: column;
+    padding: 0;
+  }
+  .about-par {
+    display: block;      
+    width: 100%;
+    margin: 0;        
+    text-align: left;    
+    align-self: flex-start;
+    text-justify: none;     
+  }
+  .interventions {
+    padding-left: 0;
+  }
+}

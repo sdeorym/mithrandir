@@ -1,14 +1,13 @@
-/* import aglae from "../assets/images/slider/01-aglae.avif";
-import synchrotron from "../assets/images/slider/02-synchrotron.avif";
-import jeanZay from "../assets/images/slider/03-JeanZay.avif";
-import motors from "../assets/images/slider/04-gm.avif";
-import aircraft from "../assets/images/slider/05-aeromexico.avif";*/
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import '../styles/Slider.css'
-import confiance from "../assets/images/slider/00-nube-logos.avif";
-import wordcloud from "../assets/images/slider/01-wordcloud.avif";
+import confianceL from "../assets/images/slider/NubeLogos.webp";
+import confianceM from "../assets/images/slider/NubeLogosM.webp";
+import confianceS from "../assets/images/slider/NubeLogosS.webp";
+import wordcloudL from "../assets/images/slider/WordCloud.webp";
+import wordcloudM from "../assets/images/slider/WordCloudM.webp";
+import wordcloudS from "../assets/images/slider/WordCloudS.webp";
 import Button from "../DRY/Button"
 
 function Slider() {
@@ -19,13 +18,13 @@ function Slider() {
         {
             "id" : "0",
             "concept" : "Ils nous ont fait confiance",
-            "source" : confiance,
+            "source" : { large: confianceL, medium: confianceM, small: confianceS },
             "alt": "Logos des entreprise où Luis Arean a fait ses services."
         },
         {
             "id" : "1",
             "concept" : "",
-            "source" : wordcloud,
+            "source" : { large: wordcloudL, medium: wordcloudM, small: wordcloudS },
             "alt": "Nuage de compétences qu'on vous offrit."
         }
     ]
@@ -78,12 +77,17 @@ function Slider() {
         <>
             <div className="slideShow">
                     <span className="arrows">
-                        <Button onClick={goPrevious} classname={"arrows leftie"} buttonType="button" title={<FontAwesomeIcon icon={ faAngleLeft } alt="<=" size="3x" /> } />
-                        <Button onClick={goNext} classname={"arrows rightie"} buttonType="button" title={<FontAwesomeIcon icon={ faAngleRight } alt="=>" size="3x" />} />
+                        <Button onClick={goPrevious} aria={"Précédent"} classname={"arrow"} buttonType="button" title={<FontAwesomeIcon icon={ faAngleLeft } alt="<=" size="3x" /> } />
+                        <Button onClick={goNext} aria={"Suivant"} classname={"arrow"} buttonType="button" title={<FontAwesomeIcon icon={ faAngleRight } alt="=>" size="3x" />} />
                     </span>
                 <div className="sliderWindow">
                     <span>{slides[slide].concept}</span>
-                    <img src={slides[slide].source} alt={slides[slide].alt}></img>
+                    <picture>
+                        <source srcSet={slides[slide].source.large} media="(min-width: 1025px)" />
+                        <source srcSet={slides[slide].source.medium} media="(min-width: 769px) and (max-width: 1024px)" />
+                        <source srcSet={slides[slide].source.small} media="(max-width: 768px)" />
+                        <img src={slides[slide].source.large} alt={slides[slide].alt} />
+                    </picture>
                 </div>                        
             </div>            
         </>

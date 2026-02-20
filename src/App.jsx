@@ -37,7 +37,7 @@ function App() {
         <section id="slide">
           <Slider />
         </section>        
-        <section id="recomendations">
+        <section id="recommendations">
           <Recommendations />
         </section>
         <section id="contact">

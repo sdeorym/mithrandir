@@ -3,7 +3,7 @@ function Service({service, content}) {
     return(
         <>
             <div className="serving-details">
-                <h4>{service}</h4>
+                <h3>{service}</h3>
                 <p>{content}</p>
             </div>
         </>

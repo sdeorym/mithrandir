@@ -82,3 +82,22 @@ iframe {
 .onArrival p {
   font-size:17.5px;
 }
+
+@media (max-width: 1024px) {
+  .contactForm  {
+    width: 60%;
+  }
+  .textbox {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .textbox {
+    width: 90%;
+  }
+}
