@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+import "../DRY/i18n.js"
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +8,9 @@ import Button from "./Button";
 function ContactForm({stateModal, changeStateModal}) {
     const [formData, setFormData] = useState({username: '', email: '', message: ''});
     const [showModal, setShowModal] = useState(false);
+    const { t } = useTranslation();
+
+    const sendButton = t("elementNames.send_button");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -30,11 +35,11 @@ function ContactForm({stateModal, changeStateModal}) {
             
             if (!response.ok) {
                 const text = await response.text(); 
-                throw new Error("Il y a eu une erreur.");
+                throw new Error(t("elementNames.failure"));
             }
             const result = await response.json();
             console.log(result);
-            alert("Message envoyé avec succès");
+            alert(t("elementNames.success"));
             setFormData({username: '', email: '', message: ''});
             e.target.reset();
             // handleModal();         
@@ -49,42 +54,26 @@ function ContactForm({stateModal, changeStateModal}) {
         <>
             <form className="contactForm" onSubmit={handleSubmit}>
                 <div className="textbox">
-                    <label htmlFor="username">Nom</label>
-                    <input type="text" id="username" name="username" onBlur={handleChange} placeholder="Nom, prenom" required />
+                    <label htmlFor="username">{t("elementNames.name")}</label>
+                    <input type="text" id="username" name="username" onBlur={handleChange} placeholder={t("elementNames.name_placeholder")} required />
                 </div>
                 <div className="textbox">
-                    <label htmlFor="email">Courriel</label>
+                    <label htmlFor="email">{t("elementNames.email")}</label>
                     <input type="email" id="email" name="email" onBlur={handleChange} placeholder="info@example.com" required />
                 </div>
                 <div className="textbox">
-                    <label htmlFor="message">Message</label>
-                    <textarea type="text"name="message" rows="15" onBlur={handleChange} placeholder="Votre message ici" required />
+                    <label htmlFor="message">{t("elementNames.message")}</label>
+                    <textarea type="text"name="message" rows="15" onBlur={handleChange} placeholder={t("elementNames.message_placeholder")} required />
                 </div>
                 <Button
                     buttonType = "submit" 
-                    title = {<> <FontAwesomeIcon icon={faPaperPlane} /> Envoyer</>}
+                    title = {<> <FontAwesomeIcon icon={faPaperPlane} /> {sendButton} </>}
                     value = "Send" 
                     classname = {((formData.username!="") && (formData.email!="")) ? "submit enabled" : "submit disabled"} 
                     disabled = {((formData.username=="") || (formData.email=="")) ? true : false}
                     data={formData} 
                 />               
             </form>
-            {/*<iframe name="hidden_iframe"/>
-            {showModal && (
-                <div className="overlay">
-                    <div className="modal">
-                        <div className="onArrival">
-                            <p>Merci pour votre message.</p>
-                            <p>Vous aurez un retour dans les meilleurs délais. {renderModal}</p>
-                            <Button 
-                                onClick={() => window.location.reload()}
-                                title="Fermer"
-                                classname="submit enabled"
-                            />
-                        </div>
-                    </div>
-                </div>
-            )}*/}
         </>
     );
 }

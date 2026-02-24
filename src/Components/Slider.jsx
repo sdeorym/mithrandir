@@ -1,3 +1,6 @@
+
+import { useTranslation } from "react-i18next";
+import "../DRY/i18n.js"
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
@@ -11,21 +14,21 @@ import wordcloudS from "../assets/images/slider/WordCloudS.webp";
 import Button from "../DRY/Button"
 
 function Slider() {
+    const { t } = useTranslation();
     const [slide, setSlide] = useState(0);
-
 
     const slides = [
         {
             "id" : "0",
-            "concept" : "Ils nous ont fait confiance",
+            "concept" : t("slides.confiance.concept"),
             "source" : { large: confianceL, medium: confianceM, small: confianceS },
-            "alt": "Logos des entreprise où Luis Arean a fait ses services."
+            "alt": t("slides.confiance.alt")
         },
         {
             "id" : "1",
             "concept" : "",
             "source" : { large: wordcloudL, medium: wordcloudM, small: wordcloudS },
-            "alt": "Nuage de compétences qu'on vous offrit."
+            "alt": t("slides.wordcloud.alt")
         }
     ]
         /*

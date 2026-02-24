@@ -1,52 +1,51 @@
+import { useTranslation } from "react-i18next";
+import "../DRY/i18n.js"
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import Switcher from "../DRY/Switcher";
 import Button from "../DRY/Button"
 
 function Menu() {
     const [open, setOpen] = useState(false);
+    const { t } = useTranslation();
 
     const buttonry = [
         {
             "id": "0",
             "value": "about",
-            "title": "À propos",
+            "title": t("sectionTitles.about"),
             "hashtag": "#about",
-            "aria" : "Section à propos"
+            "aria" : t("sectionTitlesAria.about")
         },
         {
             "id": "1",
             "value": "services",
-            "title": "Nos services",
+            "title": t("sectionTitles.services"),
             "hashtag": "#services",
-            "aria" : "Section Services"
+            "aria" : t("sectionTitlesAria.services")
         },
         {
             "id": "2",
             "value": "missions",
-            "title": "Nos missions",
+            "title": t("sectionTitles.missions"),
             "hashtag": "#missions",
-            "aria" : "Section Missions"
+            "aria" : t("sectionTitlesAria.missions")
         },
         {
             "id": "3",
             "value": "recommendations",
-            "title": "Recommendations",
+            "title": t("sectionTitles.recommendations"),
             "hashtag": "#recommendations",
-            "aria" : "Section Recommendations"
+            "aria" : t("sectionTitlesAria.recommendations")
         },
-/*        {
-            "id": "4",
-            "value": "resumee",
-            "title": "Resumee",
-            "hashtag": "#resumee"
-        },*/
+
         {
             "id": "5",
             "value": "contact",
-            "title": "Contact",
+            "title": t("sectionTitles.contact"),
             "hashtag": "#contact",
-            "aria" : "Section Contact"
+            "aria" : t("sectionTitlesAria.contact")
         }
     ]
     
@@ -93,6 +92,7 @@ function Menu() {
                         />
                     )}
                 </div>)}
+            <Switcher />
         </div>
     </>)
 }

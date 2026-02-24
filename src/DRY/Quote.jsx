@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Button from "./Button"
 
 function Quote({quote, author, maxLength=350}) {
+    const { t } = useTranslation();
     const [expanded, setExpanded] = useState(false);
     const isLong = quote.length > maxLength;
     const displayedText = expanded || !isLong

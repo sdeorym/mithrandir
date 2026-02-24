@@ -44,9 +44,6 @@ body {
   width: 100%;
   background-color: var(--white);
 }
-h1 {
-  font-size: clamp(30px, 4vw, 50px);
-}
 h2, h3 {
   text-align: center;
 }
@@ -103,10 +100,12 @@ header h2 {
   justify-content:space-between;
   height: auto;
   padding: 0 15px;
+  align-items: center;
 }
 .title {
   font-family: 'PT Serif';
-  padding: 15px;  
+  padding: 15px;
+  font-size: clamp(20px, 2.5vw, 50px);
 }
 .title a {
   all: unset;
@@ -128,7 +127,8 @@ header h2 {
   width: 110px;  
   border: none;
   font-family: 'LibreBaskerville', sans-serif;
-  font-style:normal;
+  font-size: clamp(9px, 1.5vw, 15px);
+  font-style: normal;
   transition: all 0.2s ease;
   padding: 5% 1%;
 }
@@ -146,7 +146,19 @@ header h2 {
 }
 .mobile-menu {
   display: none;
-
+}
+.langBar {
+  display: flex;
+  flex-direction: column;
+}
+.langBar button {
+  background-color: transparent;
+  color: var(--gray-fonts);
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.2s ease;
 }
 
 /* Footer */
@@ -179,7 +191,11 @@ footer {
   box-sizing: border-box;
   max-height: 100vh;
 }
-
+@media (max-width: 1024px) {
+  .taggingSections button:hover {
+    transform: scale(1.1);
+  }
+}
 @media (max-width: 767px) {
   header {
       height: auto;

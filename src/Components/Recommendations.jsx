@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import '../styles/Recommendations.css'
 import Quote from "../DRY/Quote"
 
 function Recommendations() {
+    const { t } = useTranslation();
     const quotes = [
         {
             "id": "0",
@@ -31,7 +33,7 @@ function Recommendations() {
     ]
     return (
     <>
-        <h2>Recommendations</h2>    
+        <h2>{t("sectionTitles.recommendations")}</h2>    
         <div className="quoteBox">
             {quotes.map((q, i) => 
                 <div className="quoting" key={i}>
