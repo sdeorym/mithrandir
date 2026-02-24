@@ -19,8 +19,14 @@ const sectionTitlesAria ={
 
 const hero = {
  title: "The experience and quality of a major consulting firm at your reach",
- first_paragraph: "<1>Expert consultant</1>, <2>developer senior</2> et <3>tech lead</3> with more than 30 years of experience, I mainly intervene on web applications at risk.",
- second_paragraph: "My principal role: <1>reduce the technical debt</1>, design reliable architectures and help teams deliver speedily and calmly."
+ consultor: "Expert consultant",
+ senior: "senior developer",
+ conjunction: "and",
+ leader: "tech lead",
+ first_paragraph: " with more than 30 years of experience, I mainly intervene on web applications at risk.",
+ main_role: "My principal role:",
+ debt: "reduce the technical debt",
+ second_paragraph: ", design reliable architectures and help teams deliver speedily and calmly."
 }
 
 // SERVICES

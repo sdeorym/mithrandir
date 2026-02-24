@@ -19,8 +19,14 @@ const sectionTitlesAria ={
 
 const hero = {
  title: "L'expérience et la qualité d'une grande société de consulting à votre portée.",
- first_paragraph: "<b>Consultant expert/b>, <b>développeur senior</b> et <b>tech lead</b> avec plus de 30 ans d’expérience, j’interviens surtout sur des applications web à enjeux.",
- second_paragraph: "Mon rôle principal : <b>réduire le risque technique</b>, fiabiliser les architectures et aider les équipes à livrer plus vite et plus sereinement."
+ consultor: "Consultant expert",
+ senior: "développeur senior",
+ conjunction: "et",
+ leader: "tech lead",
+ first_paragraph: " avec plus de 30 ans d’expérience, j’interviens surtout sur des applications web à enjeux.",
+ main_role: "Mon rôle principal :",
+ debt: "réduire le risque technique",
+ second_paragraph: ", fiabiliser les architectures et aider les équipes à livrer plus vite et plus sereinement."
 }
 
 // SERVICES
