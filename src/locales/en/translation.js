@@ -24,7 +24,7 @@ const hero = {
  conjunction: "and",
  leader: "tech lead",
  first_paragraph: " with more than 30 years of experience, I mainly intervene on web applications at risk.",
- main_role: "My principal role:",
+ main_role: "My principal role is to",
  debt: "reduce the technical debt",
  second_paragraph: ", design reliable architectures and help teams deliver speedily and calmly."
 }
@@ -81,7 +81,7 @@ const serve = {
     }, 
  service6 : {
     "id" : "6",
-    "service": "Best practices implementation, code reviews",
+    "service": "Best practices implementation, code reviews, AI-assisted development",
     "content": "Improvement of the collective capacity to deliver with reliability, predictability and pragmatism."
     },
  service7 : {
@@ -207,7 +207,8 @@ const fields = {
     role: "Role", 
     result: "Result", 
     stack: "Stack",
-    alterTech: "Other technologies"}
+    alterTech: "Other technologies"
+}
 
 const slides = {
  confiance :{

@@ -94,7 +94,7 @@ const serve = {
  }, 
  service6 : {
  "id" : "6",
- "service": "Mise en œuvre de méthodologies et bons pratiques, Code review",
+ "service": "Mise en œuvre de méthodologies et bons pratiques, code review, développement assisté par IA",
  "content": "Amélioration de la capacité collective à livrer avec fiabilité, prévisibilité et pragmatisme."
  },
  service7 : {
